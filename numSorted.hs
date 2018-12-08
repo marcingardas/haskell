@@ -1,7 +1,7 @@
 -- Return the number of times item x occured in a sorted array
-numSorted :: [Int] -> Int -> Int
-numSorted [] x = 0
-numSorted (ah:at) x
+numSorted :: Ord a => a -> [a] -> Int
+numSorted x [] = 0
+numSorted x (ah:at)
     | x < ah = 0
-    | x == ah = 1 + numSorted at x
-    | otherwise = numSorted at x
+    | x == ah = 1 + numSorted x at
+    | otherwise = numSorted x at

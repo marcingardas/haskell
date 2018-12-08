@@ -1,5 +1,6 @@
 -- Return array with first occurance of x removed
-delFirst :: [Int] -> Int -> [Int]
-delFirst (ah:at) x
+delFirst :: Eq a => a -> [a] -> [a]
+delFirst x [] = []
+delFirst x (ah:at)
     | ah == x = at
-    | otherwise    = [ah] ++ delFirst at x
+    | otherwise = [ah] ++ delFirst x at
