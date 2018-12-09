@@ -1,4 +1,4 @@
--- Return array with first occurance of x removed
+-- Return list with first occurance of x removed
 delFirst :: Eq a => a -> [a] -> [a]
 delFirst x [] = []
 delFirst x (ah:at)

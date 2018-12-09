@@ -1,4 +1,4 @@
--- Return array with all x values replaced with y
+-- Return list with all x values replaced with y
 repAll :: Eq a => a -> a -> [a] -> [a]
 repAll _ _ [] = []
 repAll x y (ah:at)
