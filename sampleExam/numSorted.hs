@@ -1,4 +1,4 @@
--- Return the number of times item x occured in a sorted array
+-- Return the number of times item x occured in a sorted list
 numSorted :: Ord a => a -> [a] -> Int
 numSorted x [] = 0
 numSorted x (ah:at)
